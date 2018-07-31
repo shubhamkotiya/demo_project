@@ -1,0 +1,171 @@
+<!DOCTYPE html>  
+  <html>
+    <head>
+    <title>PROJECT</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style type="text/css">
+        .login{
+            border: 1px solid blue;
+            width: 600px;
+            height: 200px;
+            float:center;
+            display: none;
+            color: red;
+        }
+        .signup{
+            border: 1px solid black;
+            width: 600px;
+            height: 510px;
+            float:center;
+            display: none;
+            color: red;
+        }
+        .userDetails{
+           
+            width: 50%;
+            
+            display: none;
+            color: black;
+            font-size: 15px;
+            
+        }
+
+      </style>
+      
+      <script type="text/javascript" src="project.js"></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" id="dummy" href="#">DUMMY</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active" id="user"><a id="user_name" href="#"></a></li> <!--user_name-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="signIn">
+            <li><a href="#" id="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#" id="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+     
+<!-- login page-->
+    <center>
+      <div class="login">
+        <h2 style="color: blue;">LOGIN</h2>
+        <form name="logform">
+          <div class="form-group">
+            <label for="email">EMAIL:</label>
+            <input type=email id="emaillog" name="email" class="form-control"value="google@gmail.com"></input>
+          </div>
+          <div class="form-group">
+            <label for="password">PASSWORD:</label>
+             <input type=password id="passlog" name="passsword" class="form-control"value="123a"></input>
+          </div>
+          <button type=submit class="btn btn-default btn-lg" id="log" name="logbtn"
+          style="background-color:lightblue;">LOGIN</button>
+        </form>
+      </div>
+    </center>
+<!--signup page-->
+    <center>
+      <div class="signup">
+        <div class="jumbotron">
+          <h2 style="color: blue;">SIGN UP</h2>
+          <form id="signupform">
+            <div class="form-group" data-toggle="validator" role="form">
+              <label for="name">NAME:</label>
+              <input type=text id="namebox" name="NAME" class="form-control" ></input>
+            </div>
+            <div class="form-group">
+              <label for="email">EMAIL:</label>
+              <input type=email id="emailbox" name="email" class="form-control" ></input>
+            </div>
+             <div class="form-group">
+              <label for="password">PASSWORD:</label>
+              <input type=password id="passwordbox" name="password" class="form-control" ></input>
+            </div>
+             <div class="form-group">
+              <label for="cpassword">CONFIRM PASSWORD:</label>
+              <input type=password id="cpasswordbox" name="cpassword" class="form-control" ></input>
+            </div>
+            <button type=submit class="btn btn-default btn-lg" id="signupbtn" name="SIGNUPBTN"
+            style="background-color:lightblue;">SIGNUP</button>
+          </form>
+       </div>
+      </div>
+    </center>
+
+    <table id="userDataTable" class="table table-bordered">
+      <thead>
+        <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>password</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>sk</td>
+            <td>sk@g.com</td>
+            <td>123</td>
+          </tr>
+        </tbody>
+    </table>
+
+
+    </body>
+<!--USER-->
+  
+    <div class="userDetails">
+      <div class="container"> 
+        <div class="jumbotron">
+          <h3 style="color: blue">logged In user details:</h3>
+          <label for="name">NAME:</label>
+          <label for="name1" id="n1"></label><br>
+          <label for="email">EMAIL:</label>
+          <label for="email1" id="n2"></label>
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">POST DATA</button>
+      </div>
+    </div>
+    </div>
+
+<!-- modal-->
+    <div class="container">
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">PUT DATA</h4>
+            </div>
+            <div class="modal-body">
+             
+              <textarea id="textArea" placeholder="write something..." class="form-control"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" id="post" class="btn btn-primary" data-dismiss="modal">POST</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--user post-->
+  
+     <div id="userPost">
+      <div class="container" style="margin-left: 8px;">
+       <div class="jumbotron">
+        <p class="alert alert-success" id="usertxt" style="color: blue"></p>
+       </div>
+      </div>
+    </div>
+  </html>
+
+
+

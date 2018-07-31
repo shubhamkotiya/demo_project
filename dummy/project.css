@@ -1,0 +1,35 @@
+        .login{
+            border: 1px solid blue;
+            width: 600px;
+            height: 200px;
+            float:center;
+            display: none;
+            color: red;
+        }
+        .signup{
+            border: 1px solid black;
+            width: 600px;
+            height: 510px;
+            float:center;
+            display: none;
+            color: red;
+        }
+        .userDetails{
+            border: 2px solid black;
+            width: 200px;
+            height:170px;
+    
+            display: none;
+            color: black;
+            font-size: 15px;
+        }
+        .Post{
+            border: 2px solid red;
+            width: 400px;
+            height:70px;
+            float: right;
+            display: none;
+            color: black;
+            font-size: 15px;
+        }
+
