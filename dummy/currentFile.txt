@@ -1,2 +1,1 @@
-this is current file
-it contains text
+new text
