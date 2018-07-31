@@ -104,6 +104,7 @@
       }
       loop++ ;
   }
+  console.log(loop);
   if(loop==userLog.length){
     alert("wrong input");
   }
